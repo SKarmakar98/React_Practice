@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+// import FontAwesomeIcon from "FontAwesomeIcon";
 export default function Form() {
   let colours = { color: "White", backgroundColor: "black" };
   let [text, Settext] = useState("Enter Your Text");
@@ -39,8 +39,8 @@ export default function Form() {
   //   bg colour change
   return (
     <div style={bg_black}>
-      <button style={{ borderRadius: "50%" }} onClick={bgbtn_text_change}>
-        {b_text}
+      <button style={{ borderRadius: "50%" ,float:"left",height:'40px',width:'40px'}} onClick={bgbtn_text_change}>
+        {/* {b_text} */}
       </button>
       <div
         className="container
