@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 // import FontAwesomeIcon from "FontAwesomeIcon";
+import moon from "../images/moon.png"
+import sun from "../images/sun.png"
 export default function Form() {
   let colours = { color: "White", backgroundColor: "black" };
   let [text, Settext] = useState("Enter Your Text");
   let [bg_black, bg_white] = useState({ color: "White", backgroundColor: "black" });
-  let [b_text, b_text_black] = useState("white");
+  let [b_text, b_text_black] = useState({moon});
+  // console.log({moon});
+  // console.log({b_text});
   // text change and text cases
   let ChangeValur = () => {
     let uppertext = text.toUpperCase();
@@ -30,17 +34,19 @@ export default function Form() {
     if (bg_black.backgroundColor == "black") {
     //   bg_white({ color: "white", backgroundColor: "w" });
       bg_white({ color: "black", backgroundColor: "white " });
-      b_text_black("black")
+      b_text_black({sun})
     } else {
         bg_white({color: "White", backgroundColor: "black" });
-        b_text_black("white")
+        b_text_black({sun})
     }
   };
   //   bg colour change
+  // console.log(b_text+"test")
   return (
     <div style={bg_black}>
-      <button style={{ borderRadius: "50%" ,float:"left",height:'40px',width:'40px'}} onClick={bgbtn_text_change}>
+      <button style={{ borderRadius: "50%" ,float:"left",border:'none',background:'none'}} onClick={bgbtn_text_change}>
         {/* {b_text} */}
+       <img src={moon} style={{height:'20px',width:'20px',alignItems:'center'}}/>
       </button>
       <div
         className="container
